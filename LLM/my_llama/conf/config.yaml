@@ -1,0 +1,21 @@
+# Hydra базовый конфиг
+defaults:
+  - _self_
+
+model:
+  n_layers: 4
+  n_heads: 8
+  hidden_size: 32
+  vocab_size: 30522 # bert tokenizer
+  max_seq_len: 1000
+  with_lora: True
+
+train:
+  batch_size: 16
+  epochs: 5
+  lr: 1e-3
+
+logging:
+  print_every: 5
+  save_dir: ./outputs
+  tensorboard: True
